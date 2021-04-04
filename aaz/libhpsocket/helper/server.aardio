@@ -1,9 +1,9 @@
 ﻿
 namespace aaz.libhpsocket.helper.server;
-reallocString = function(component, connId, size){
+reallocString = function(component, connId, size=0){
 	var ok, pExtra = component.getConnectionExtra(connId);
 	if(ok){
-		return component.setConnectionExtra(connId,..raw.realloc(size>0?size:0,pExtra,""));; 
+		return component.setConnectionExtra(connId, ..raw.realloc(size, pExtra, ""));; 
 	}	
 }
 

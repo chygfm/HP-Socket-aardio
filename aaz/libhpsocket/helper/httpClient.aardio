@@ -8,11 +8,11 @@ var wsHelper = ..aaz.libhpsocket.helper.websocket;
 
 var defaultSaveWsUpgradeRequestKey = function(component, key ){
 	self.reallocString(component, #key);
-	appendString(component, key,#key)
+	self.appendString(component, key,#key)
 }
 
 var defaultGetWsUpgradeRequestKey = function(component){
-	var requestKey = getString(component); 
+	var requestKey = self.getString(component); 
 	self.reallocString(component, 0);
 	return requestKey; 
 }

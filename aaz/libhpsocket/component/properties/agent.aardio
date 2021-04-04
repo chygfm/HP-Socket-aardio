@@ -142,12 +142,11 @@ getAllConnectionIds = function(){
 	
 	_dll.HP_Agent_GetAllConnectionIDs(owner.pAgent, null, ids.array);
 	if( ids.array.length == 0 ){
-		return true, ids.array; 
+		return null; 
 	}
-
-	return 
-		_dll.HP_Agent_GetAllConnectionIDsB(owner.pAgent, ids, ids.array), 
-		ids.array;
+	
+	_dll.HP_Agent_GetAllConnectionIDsB(owner.pAgent, ids, ids.array);
+	return ids.array;
 }
 
 getConnectPeriod = function(connId){
@@ -294,11 +293,11 @@ freeSocketObjPool = {
 
 freeBufferObjPool = {
     _get = function(){
-    	return _dll.HP_Agent_GetFreeSocketObjPool( owner.pAgent ); 
+    	return _dll.HP_Agent_GetFreeSocketObjPool(owner.pAgent); 
     }
     
     _set = function(v){
-    	_dll.HP_Agent_SetFreeBufferObjPool( owner.pAgent, v );
+    	_dll.HP_Agent_SetFreeBufferObjPool(owner.pAgent, v);
     } 
 }
 

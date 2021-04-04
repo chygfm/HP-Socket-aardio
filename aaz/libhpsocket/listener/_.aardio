@@ -2,8 +2,7 @@
 namespace aaz.libhpsocket;
 class listener{
     ctor(){
-        // gc 保护
-        ..table.push(__cache__, this);
+        ..table.push(__gcProtectTable__, this);
     }
     
 	createThreadCallback = function(callback, proto){
@@ -32,5 +31,5 @@ class listener{
 	}
 }
 namespace listener{
-    __cache__ = {};	
+    __gcProtectTable__ = {};	
 }
