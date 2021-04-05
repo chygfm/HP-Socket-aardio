@@ -4,7 +4,7 @@ import aaz.libhpsocket.helper.cookie;
 import aaz.libhpsocket.component.properties.tcpServer;
 
 namespace aaz.libhpsocket.component.properties.httpServer;
-..table.assign(self, ..aaz.libhpsocket.component.properties.tcpServer);
+..table.mix(self, ..aaz.libhpsocket.component.properties.tcpServer);
 
 var _dll = ..aaz.libhpsocket._dll;
 var wsHelper = ..aaz.libhpsocket.helper.websocket;

@@ -10,15 +10,13 @@ class httpClient{
 		this = ..aaz.libhpsocket.listener();
 		this.pListener = _dll.Create_HP_HttpClientListenerP();
 		this.componentClassPath = "component.httpClient";
-	}
-	
+	};	
 	destroy = function(){
 		if(this.pListener){
 			_dll.Destroy_HP_HttpClientListener(this.pListener);
 			this.pListener = null;
 		}
-	}
-	
+	};	
 	@_metaProperty;
 }
 httpClient._metaProperty = ..util.metaProperty(..aaz.libhpsocket.listener.properties.httpClient);

@@ -5,5 +5,5 @@ class tcpClient{
 	ctor(){
 		this = ..aaz.libhpsocket.listener.tcpClient();
 		this.componentClassPath = "ssl.component.tcpClient";
-	}
+	};
 }

@@ -5,5 +5,5 @@ class httpSyncClient{
 	ctor(){
 		this = ..aaz.libhpsocket.ssl.listener.httpClient();
 		this.componentClassPath = "ssl.component.httpSyncClient";
-	}
+	};
 }

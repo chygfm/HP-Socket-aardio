@@ -8,12 +8,11 @@ class tcpClient{
 		this = ..aaz.libhpsocket.listener.client();
 		this.pListener = _dll.Create_HP_TcpClientListenerP();
 		this.componentClassPath = "component.tcpClient";	
-	}
-
+	};
 	destroy = function(){
 		if(this.pListener){
 			_dll.Destroy_HP_TcpClientListener(this.pListener);
 			this.pListener = null;
 		}
-	}
+	};
 }

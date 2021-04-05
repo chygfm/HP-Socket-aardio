@@ -3,7 +3,7 @@ import aaz.libhpsocket.helper.cookie;
 import aaz.libhpsocket.component.properties.tcpAgent;
 
 namespace aaz.libhpsocket.component.properties.httpAgent;
-..table.assign(self, ..aaz.libhpsocket.component.properties.tcpAgent);
+..table.mix(self, ..aaz.libhpsocket.component.properties.tcpAgent);
 
 var _dll = ..aaz.libhpsocket._dll;
 

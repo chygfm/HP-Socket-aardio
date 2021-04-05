@@ -1,7 +1,7 @@
 ﻿import aaz.libhpsocket.component.properties.tcpAgent;
 
 namespace aaz.libhpsocket.component.properties.tcpPullAgent;
-..table.assign(self, ..aaz.libhpsocket.component.properties.tcpAgent);
+..table.mix(self, ..aaz.libhpsocket.component.properties.tcpAgent);
 
 var _dll = ..aaz.libhpsocket._dll;
 

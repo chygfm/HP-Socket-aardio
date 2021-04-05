@@ -8,12 +8,11 @@ class udpArqClient{
 		this = ..aaz.libhpsocket.listener.client();
 		this.pListener = _dll.Create_HP_UdpArqClientListenerP();
 		this.componentClassPath = "component.udpArqClient";
-	}
-
+	};
 	destroy = function(){
 		if(this.pListener){
 			_dll.Destroy_HP_UdpArqClientListener(this.pListener);
 			this.pListener = null;
 		}
-	}
+	};
 }

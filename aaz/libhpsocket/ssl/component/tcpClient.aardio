@@ -16,15 +16,13 @@ class tcpClient{
 		else {
 			error("请指定参数1 pSocket 或参数2 pListener", 2);
 		}
-	}
-	
+	};	
 	destroy = function(){
 		if(this.pSocket){
 			_dll.Destroy_HP_SSLClient(this.pSocket);
 			this.pSocket = null;
 		}
-	}
-	
+	};	
 	@_metaProperty;
 }
 tcpClient._metaProperty = ..util.metaProperty(..aaz.libhpsocket.ssl.component.properties.tcpClient);

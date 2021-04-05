@@ -16,15 +16,13 @@ class tcpPullClient{
 		else {
 			error("请指定参数@1 pSocket 或参数@2 pListener", 2);
 		}
-	}
-	
+	};	
 	destroy = function(){
 		if(this.pSocket){
 			_dll.Destroy_HP_TcpPullClient(this.pSocket);
 			this.pSocket = null;
 		}
-	}
-	
+	};	
 	@_metaProperty;
 }
 tcpPullClient._metaProperty = ..util.metaProperty(..aaz.libhpsocket.component.properties.tcpPullClient);

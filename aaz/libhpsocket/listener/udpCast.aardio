@@ -8,12 +8,11 @@ class udpCast{
 		this = ..aaz.libhpsocket.listener.client();
 		this.pListener = _dll.Create_HP_UdpCastListenerP();
 		this.componentClassPath = "component.udpCast";
-	}
-
+	};
 	destroy = function(){
 		if(this.pListener){
 			_dll.Destroy_HP_UdpCastListener(this.pListener);
 			this.pListener = null;
 		}
-	}
+	};
 }

@@ -8,12 +8,11 @@ class tcpPullServer{
 		this = ..aaz.libhpsocket.listener.server();
 		this.pListener = _dll.Create_HP_TcpPullServerListenerP(); 
 		this.componentClassPath = "component.tcpPullServer";
-	}
-
+	};
 	destroy = function(){
 		if(this.pListener){
 			_dll.Destroy_HP_TcpPullServerListener(this.pListener);
 			this.pListener = null;
 		}
-	}
+	};
 }

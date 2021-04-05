@@ -7,15 +7,15 @@ _topointer = function(){
     return owner.pSocket; 
 }
 
-start = function( bindAddress, port ){
-	if( _dll.HP_UdpNode_StartB( owner.pSocket, bindAddress, port ) ){
+start = function(bindAddress, port){
+	if( _dll.HP_UdpNode_StartB(owner.pSocket, bindAddress, port)){
 		return true; 
 	}
 	return false, owner.lastError; 
 }
 
-startWithCast = function( bindAddress, port=0, castMode=-1, castAddress ){
-	if( _dll.HP_UdpNode_StartWithCastB(owner.pSocket, bindAddress, port, castMode, castAddress) ){
+startWithCast = function(bindAddress, port=0, castMode=-1, castAddress){
+	if( _dll.HP_UdpNode_StartWithCastB(owner.pSocket, bindAddress, port, castMode, castAddress)){
 		return true; 
 	}
 	return false, owner.lastError; 

@@ -10,15 +10,13 @@ class udpNode{
 		this = ..aaz.libhpsocket.listener();
 		this.pListener = _dll.Create_HP_UdpNodeListenerP(); 
 		this.componentClassPath = "component.udpNode"; 
-	}
-
+	};
 	destroy = function(){
 		if(this.pListener){
 			_dll.Destroy_HP_UdpNodeListener(this.pListener);
 			this.pListener = null;
 		}
-	}
-	
+	};	
 	@_metaProperty;
 }
 udpNode._metaProperty = ..util.metaProperty(..aaz.libhpsocket.listener.properties.udpNode); 

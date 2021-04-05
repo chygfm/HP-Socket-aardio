@@ -16,15 +16,13 @@ class udpNode{
 		else {
 			error("请指定参数@1 pSocket 或参数@2 pListener", 2);
 		}
-	}
-	
+	};	
 	destroy = function(){
 		if(this.pSocket){
 			_dll.Destroy_HP_UdpNode(this.pSocket);
 			this.pSocket = null;
 		}
-	}
-	
+	};	
 	@_metaProperty;
 }
 udpNode._metaProperty = ..util.metaProperty(..aaz.libhpsocket.component.properties.udpNode);

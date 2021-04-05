@@ -13,15 +13,13 @@ class extra{
 		else {				
 			this.extra = ..raw.realloc(..raw.sizeof(this), null, this); 
 		}
-	}
-	
+	};
 	free = function(){
 		if(this.extra){
 			this.extra = ..raw.realloc(0, this.extra);
 		}
-	}
-	
+	};
 	save = function(){
 		..raw.convert(this, this.extra); 
-	}
+	};
 }

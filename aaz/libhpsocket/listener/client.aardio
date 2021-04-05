@@ -6,8 +6,7 @@ namespace aaz.libhpsocket.listener;
 class client{
 	ctor(){
 		this = ..aaz.libhpsocket.listener();
-	}
-	
+	};	
 	@_metaProperty;
 }
 client._metaProperty = ..util.metaProperty(..aaz.libhpsocket.listener.properties.client);

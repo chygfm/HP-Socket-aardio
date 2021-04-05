@@ -9,12 +9,11 @@ class udpServer{
 		this = ..aaz.libhpsocket.listener.server();
 		this.pListener = _dll.Create_HP_UdpServerListenerP();
 		this.componentClassPath = "component.udpServer";
-	}
-
+	};
 	destroy = function(){
 		if(this.pListener){
 			_dll.Destroy_HP_UdpServerListener(this.pListener);
 			this.pListener = null;
 		}
-	}
+	};
 }

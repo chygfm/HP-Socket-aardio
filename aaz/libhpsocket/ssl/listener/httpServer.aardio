@@ -5,5 +5,5 @@ class httpServer{
 	ctor(){
 		this = ..aaz.libhpsocket.listener.httpServer();
 		this.componentClassPath = "ssl.component.httpServer";
-	}
+	};
 }

@@ -267,19 +267,3 @@ isHttpAutoStart = {
     	_dll.HP_HttpClient_SetHttpAutoStart(owner.pSocket, v)
     } 
 }
-
-getUrl = function(path, scheme){
-	var host = owner.getUrlHost();
-	if( !host ) return;
-	var url =  ..string.format("%s://%s",scheme:"http",host ); 
-	if(path){
-		path = ..string.replace(path, "\\", "/");
-		if(path[1]!='/'#) path= "/" + path;
-		return url + path;
-	}
-	return url;
-}
-
-getWsUrl = function(path){
-	return owner.getUrl( path, "ws" );
-}

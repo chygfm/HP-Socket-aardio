@@ -5,5 +5,5 @@ class httpAgent{
 	ctor(){
 		this = ..aaz.libhpsocket.listener.httpAgent();
 		this.componentClassPath = "ssl.component.httpAgent";
-	}
+	};
 }

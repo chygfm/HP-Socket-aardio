@@ -3,8 +3,7 @@ namespace aaz.libhpsocket;
 class listener{
     ctor(){
         ..table.push(__gcProtectTable__, this);
-    }
-    
+    };   
 	createThreadCallback = function(callback, proto){
 		if(!callback) error("线程回调函数不能为空", 2);
 		if(!this.componentClassPath) error("对象的 componentClassPath 属性，即组件类路径不能为空", 2);
@@ -28,7 +27,7 @@ class listener{
 				componentClassPath = "aaz.libhpsocket." ++ this.componentClassPath;
 				onThreadCreated = this.onThreadCreated;
 			});	
-	}
+	};
 }
 namespace listener{
     __gcProtectTable__ = {};	

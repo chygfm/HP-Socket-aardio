@@ -16,15 +16,13 @@ class httpSyncClient{
 		else {
 			error("请指定参数@1 pSocket 或参数@2 pListener", 2);
 		}
-	}
-	
+	};	
 	destroy = function(){
 		if(this.pSocket){
 			_dll.Destroy_HP_HttpsSyncClient(this.pSocket);
 			this.pSocket = null;
 		}
-	}
-	
+	};	
 	@_metaProperty;
 }
 httpSyncClient._metaProperty = ..util.metaProperty(..aaz.libhpsocket.ssl.component.properties.httpSyncClient);

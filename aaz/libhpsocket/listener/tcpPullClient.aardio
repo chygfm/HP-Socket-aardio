@@ -8,12 +8,11 @@ class tcpPullClient{
 		this = ..aaz.libhpsocket.listener.client();
 		this.pListener = _dll.Create_HP_TcpPullClientListenerP();
 		this.componentClassPath = "component.tcpPullAgent";
-	}
-
+	};
 	destroy = function(){
 		if(this.pListener){
 			_dll.Destroy_HP_TcpPullClientListener(this.pListener);
 			this.pListener = null;
 		}
-	}
+	};
 }

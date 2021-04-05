@@ -10,15 +10,13 @@ class httpAgent{
 		this = ..aaz.libhpsocket.listener();
 		this.pListener = _dll.Create_HP_HttpAgentListenerP(); 
 		this.componentClassPath = "component.httpAgent";
-	}
-	
+	};	
 	destroy = function(){
 		if(this.pListener){
 			_dll.Destroy_HP_HttpAgentListener(this.pListener);
 			this.pListener = null;
 		}
-	}
-	
+	};	
 	@_metaProperty;
 }
 httpAgent._metaProperty = ..util.metaProperty(..aaz.libhpsocket.listener.properties.httpAgent);

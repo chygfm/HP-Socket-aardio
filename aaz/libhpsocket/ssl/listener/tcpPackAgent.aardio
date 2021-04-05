@@ -5,5 +5,5 @@ class tcpPackAgent{
 	ctor(){
 		this = ..aaz.libhpsocket.listener.tcpPackAgent();
 		this.componentClassPath = "ssl.component.tcpPackAgent";
-	}
+	};
 }

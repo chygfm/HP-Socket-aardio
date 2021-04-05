@@ -6,9 +6,9 @@ namespace aaz.libhpsocket.helper.httpClient;
 
 var wsHelper = ..aaz.libhpsocket.helper.websocket;
 
-var defaultSaveWsUpgradeRequestKey = function(component, key ){
+var defaultSaveWsUpgradeRequestKey = function(component, key){
 	self.reallocString(component, #key);
-	self.appendString(component, key,#key)
+	self.appendString(component, key, #key)
 }
 
 var defaultGetWsUpgradeRequestKey = function(component){
@@ -27,13 +27,21 @@ getUrlHost = function(component){
 getUrl = function(component, path, scheme="http"){
 	var host = self.getUrlHost(component);
 	if(!host) return;
-	var url =  ..string.format("%s://%s", scheme, host ); 
+	var url =  ..string.format("%s://%s", scheme, host); 
 	if(path){
 		path = ..string.replace(path,"\\","/");
 		if(path[1]!='/'#) path= "/" + path;
-		return url + path;
+		return url ++ path;
 	}
 	return url;
+}
+
+getWsUrl = function(path){
+	return self.getUrl(path, "ws");
+}
+
+getWssUrl = function(path){
+	return self.getUrl(path, "wss");
 }
 
 sendWsUpgradeRequest = function(component, path="/", baseHeaders, saveWsUpgradeRequestKey){

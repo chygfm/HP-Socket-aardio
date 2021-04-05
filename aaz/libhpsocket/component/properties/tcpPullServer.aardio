@@ -1,7 +1,7 @@
 ﻿import aaz.libhpsocket.component.properties.tcpServer;
 
 namespace aaz.libhpsocket.component.properties.tcpPullServer;
-..table.assign(self, ..aaz.libhpsocket.component.properties.tcpServer);
+..table.mix(self, ..aaz.libhpsocket.component.properties.tcpServer);
 
 var _dll = ..aaz.libhpsocket._dll;
 
